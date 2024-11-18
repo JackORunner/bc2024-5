@@ -15,7 +15,6 @@ program
 
 const { host, port, cache } = program.opts();
 
-// Middleware для обробки JSON та form-data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
