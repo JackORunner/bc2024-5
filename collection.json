@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "02f96905-632b-4f05-ad63-cb4e4242e0cd",
 		"name": "New Collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "39800782"
 	},
 	"item": [
@@ -80,17 +80,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/notes",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"notes"
-					]
-				}
+				"url": "http://localhost:3000/notes"
 			},
 			"response": []
 		},
@@ -114,17 +104,7 @@
 						}
 					]
 				},
-				"url": {
-					"raw": "http://localhost:3000/write",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"write"
-					]
-				}
+				"url": "http://localhost:3000/write"
 			},
 			"response": []
 		},
@@ -133,17 +113,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/UploadForm.html",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"UploadForm.html"
-					]
-				}
+				"url": "http://localhost:3000/UploadForm.html"
 			},
 			"response": []
 		}
