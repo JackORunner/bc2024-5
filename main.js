@@ -15,7 +15,7 @@ program
 
 const { host, port, cache } = program.opts();
 
-app.use(express.json());
+app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
 
 // Перевірка існування нотатки
@@ -42,19 +42,19 @@ app.get('/notes/:noteName', async (req, res) => {
     }
 });
 
-// PUT /notes/<ім'я нотатки>
 app.put('/notes/:noteName', async (req, res) => {
     try {
         const { noteName } = req.params;
         if (!await noteExists(noteName)) {
             return res.status(404).send('Note not found');
         }
-        await fs.writeFile(path.join(cache, `${noteName}.txt`), req.body.text);
+        await fs.writeFile(path.join(cache, `${noteName}.txt`), req.body);
         res.status(200).send('Note updated');
     } catch (error) {
         res.status(500).send('Internal Server Error');
     }
 });
+
 
 // DELETE /notes/<ім'я нотатки>
 app.delete('/notes/:noteName', async (req, res) => {
